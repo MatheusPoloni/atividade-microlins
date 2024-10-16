@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Microlins</title>
+    <link rel="stylesheet" href="final.css">
+    <link rel="icon" type="imagens" href="micro logo.png">
+</head>
+<body>
+	<div class="micro">
+		<a href="index.html"> <img src="micro logo.png" alt="logo"></a>
+	</div>
+    <h1>🎊Parabéns Amadinho(a)!🎊</h1>
+    <p>Você fez seu primeiro site, pode se considerar um Dev!.</p>
+<div class="button-form">
+    <button id="animate_confetti">Comemore!</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<script>
+document.getElementById("animate_confetti").addEventListener("click", () => {
+
+	let params = {
+		particleCount: 300, // Quantidade de confetes
+		spread: 90, // O quanto eles se espalham
+		startVelocity: 70, // Velocidade inicial
+		origin: { x: 0, y: 1 }, // Posição inicial na tela
+		angle: 45 // Ângulo em que os confetes serão lançados
+	};
+
+	// Joga confetes da esquerda pra direita
+	confetti(params);
+
+	// Joga confetes da direita para a esquerda
+	params.origin.x = 1;
+	params.angle = 135;
+	confetti(params);
+
+});
+</script>
+</body>
+</html>
